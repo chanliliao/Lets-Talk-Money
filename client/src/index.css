@@ -1,0 +1,11 @@
+#root,
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(rgb(72, 138, 72), rgb(24, 85, 24));
+  background-size: cover;
+}
