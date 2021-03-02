@@ -18,11 +18,9 @@ export const Provider = ({ children }) => {
     dispatch({ type: 'ADD_TRANSACTION', payload: transaction });
   };
 
-  console.log(transactions);
-
   return (
     <ExpanseTrackerContext.Provider
-      value={{ deleteTransaction, addTransaction }}
+      value={{ deleteTransaction, addTransaction, transactions }}
     >
       {children}
     </ExpanseTrackerContext.Provider>
