@@ -14,6 +14,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { ExpanseTrackerContext } from '../../../context/context';
 
 import useStyles from './style';
+import {
+  incomeCategories,
+  expenseCategories,
+} from '../../../constants/categories';
+
 const initialState = {
   amount: '',
   category: '',
@@ -36,6 +41,9 @@ const Form = () => {
     addTransaction(transaction);
     setFormData(initialState);
   };
+
+  const selectedCategories =
+    formData.type === 'Income' ? incomeCategories : expenseCategories;
 
   return (
     <Grid container space={2}>
@@ -65,8 +73,11 @@ const Form = () => {
               setFormData({ ...formData, category: e.target.value })
             }
           >
-            <MenuItem value='business'>business</MenuItem>
-            <MenuItem value='salary'>Salary</MenuItem>
+            {selectedCategories.map((c) => (
+              <MenuItem key={c.type} value={c.type}>
+                {c.type}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
       </Grid>
