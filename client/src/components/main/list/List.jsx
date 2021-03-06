@@ -11,12 +11,12 @@ import {
 } from '@material-ui/core';
 import { Delete, MoneyOff } from '@material-ui/icons';
 
-import { ExpanseTrackerContext } from '../../../context/context';
+import { ExpenseTrackerContext } from '../../../context/context';
 import useStyles from './style';
 
 const List = () => {
   const classes = useStyles();
-  const { deleteTransaction, transactions } = useContext(ExpanseTrackerContext);
+  const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
 
   return (
     <MUIList dense={false} className={classes.list}>

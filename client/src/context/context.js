@@ -4,7 +4,7 @@ import contextReducer from './contextReducer';
 
 const initialState = [];
 
-export const ExpanseTrackerContext = createContext(initialState);
+export const ExpenseTrackerContext = createContext(initialState);
 
 export const Provider = ({ children }) => {
   const [transactions, dispatch] = useReducer(contextReducer, initialState);
@@ -19,10 +19,10 @@ export const Provider = ({ children }) => {
   };
 
   return (
-    <ExpanseTrackerContext.Provider
+    <ExpenseTrackerContext.Provider
       value={{ deleteTransaction, addTransaction, transactions }}
     >
       {children}
-    </ExpanseTrackerContext.Provider>
+    </ExpenseTrackerContext.Provider>
   );
 };

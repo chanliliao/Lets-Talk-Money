@@ -10,7 +10,7 @@ import {
   MenuItem,
 } from '@material-ui/core';
 import { v4 as uuidv4 } from 'uuid';
-import { ExpanseTrackerContext } from '../../../context/context';
+import { ExpenseTrackerContext } from '../../../context/context';
 import useStyles from './style';
 import {
   incomeCategories,
@@ -28,7 +28,7 @@ const initialState = {
 const Form = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
-  const { addTransaction } = useContext(ExpanseTrackerContext);
+  const { addTransaction } = useContext(ExpenseTrackerContext);
 
   const createTransaction = () => {
     const transaction = {
