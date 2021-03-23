@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core';
 import Form from './form/Form';
 import List from './list/List';
+import InfoCard from '../InfoCard/InfoCard';
 import { ExpenseTrackerContext } from '../../context/context';
 
 import useStyles from './styles';
@@ -29,8 +30,7 @@ const Main = () => {
           variant='subtitle1'
           style={{ lineHeight: '1.5em', marginTop: '20px' }}
         >
-          {/* {info card} */}
-          Try saying: Add income for $100 in Category Salary for Monday...
+          <InfoCard />
         </Typography>
         <Divider />
         <Form />
