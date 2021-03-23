@@ -34,7 +34,7 @@ const App = () => {
         </Grid>
       </Grid>
       <PushToTalkButtonContainer>
-        <PushToTalkButton />
+        <PushToTalkButton captureKey=' ' />
         <ErrorPanel />
       </PushToTalkButtonContainer>
     </div>
