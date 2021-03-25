@@ -108,7 +108,7 @@ const Form = () => {
     formData.type === 'Income' ? incomeCategories : expenseCategories;
 
   return (
-    <Grid container space={2}>
+    <Grid container spacing={2}>
       <Snackbar open={open} setOpen={setOpen} />
       <Grid item xs={12}>
         <Typography align='center' variant='subtitle2' gutterBottom>
