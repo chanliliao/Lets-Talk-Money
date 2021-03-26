@@ -16,12 +16,11 @@ import useStyles from './styles';
 
 const Main = () => {
   const classes = useStyles();
-
   const { balance } = useContext(ExpenseTrackerContext);
 
   return (
     <Card className={classes.root}>
-      <CardHeader title='Expense Tracker' subheader='Power by Speechly' />
+      <CardHeader title='Expense Tracker' subheader='Powered by Speechly' />
       <CardContent>
         <Typography align='center' variant='h5'>
           Total Balance ${balance}
