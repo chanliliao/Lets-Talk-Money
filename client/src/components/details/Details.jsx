@@ -13,7 +13,9 @@ const Details = ({ title, subheader }) => {
     <Card className={title === 'Income' ? classes.income : classes.expense}>
       <CardHeader title={title} subheader={subheader} />
       <CardContent>
-        <Typography variant='h5'>${total}</Typography>
+        <Typography variant='h4'>
+          ${total.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+        </Typography>
         <Doughnut data={chartData} />
       </CardContent>
     </Card>

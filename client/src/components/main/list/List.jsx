@@ -42,7 +42,11 @@ const List = () => {
             </ListItemAvatar>
             <ListItemText
               primary={transaction.category}
-              secondary={`$${transaction.amount} - ${transaction.date}`}
+              secondary={`$${transaction.amount
+                .toFixed(2)
+                .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} - ${
+                transaction.date
+              }`}
             />
             <ListItemSecondaryAction>
               <IconButton

@@ -23,7 +23,8 @@ const Main = () => {
       <CardHeader title='Expense Tracker' subheader='Powered by Speechly' />
       <CardContent>
         <Typography align='center' variant='h5'>
-          Total Balance ${balance}
+          Total Balance $
+          {balance.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
         </Typography>
         <Typography
           variant='subtitle1'
