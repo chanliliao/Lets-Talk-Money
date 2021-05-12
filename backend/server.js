@@ -2,6 +2,9 @@ import express from 'express';
 import color from 'colors';
 import path from 'path';
 
+// import for database
+import connectDB from './config/db.js';
+
 // import for enviroment variables
 import dotenv from 'dotenv';
 
@@ -12,6 +15,9 @@ dotenv.config();
 
 // initialized the server
 const app = express();
+
+// initialized DB
+connectDB();
 
 // production set up
 const __dirname = path.resolve();
