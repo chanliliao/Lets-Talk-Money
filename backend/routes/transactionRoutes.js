@@ -2,12 +2,10 @@ import express from 'express';
 const router = express.Router();
 import {
   deleteTransaction,
-  addTransaction,
-} from '../controllers/productController.js';
+  createTransaction,
+} from '../controllers/transactionController.js';
 
-router.route('/').post(addTransaction);
+router.route('/').post(createTransaction);
 router.route('/:id').delete(deleteTransaction);
-
-// add and delete routes
 
 export default router;
