@@ -26,4 +26,4 @@ const transactionSchema = mongoose.Schema(
 
 const User = mongoose.model('Transaction', transactionSchema);
 
-export default User;
+export default Transaction;
