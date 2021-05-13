@@ -131,7 +131,7 @@ const Form = () => {
             onChange={(e) => setFormData({ ...formData, type: e.target.value })}
           >
             <MenuItem value='Income'>Income</MenuItem>
-            <MenuItem value='Expanse'>Expanse</MenuItem>
+            <MenuItem value='Expense'>Expense</MenuItem>
           </Select>
         </FormControl>
       </Grid>
