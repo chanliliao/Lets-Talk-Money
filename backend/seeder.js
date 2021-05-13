@@ -1,13 +1,13 @@
 // import for model
 import mongoose from 'mongoose';
-import Transaction from './models/transactionModels';
+import Transaction from './models/transactionModels.js';
 
 // import for util
 import dotenv from 'dotenv';
 import colors from 'colors';
 
 // import for data
-import transactions from './data/transactions';
+import transactions from './data/transactions.js';
 
 // import for database
 import connectDB from './config/db.js';
