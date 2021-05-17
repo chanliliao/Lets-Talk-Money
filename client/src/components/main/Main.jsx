@@ -10,13 +10,14 @@ import {
 import Form from './form/Form';
 import List from './list/List';
 import InfoCard from '../InfoCard/InfoCard';
-import { ExpenseTrackerContext } from '../../context/context';
+import TransactionContext from '../../../context/transactionContext';
 
 import useStyles from './styles';
 
 const Main = () => {
   const classes = useStyles();
-  const { balance } = useContext(ExpenseTrackerContext);
+  const transactionContext = useContext(TransactionContext);
+  const { balance } = transactionContext;
 
   return (
     <Card className={classes.root}>
