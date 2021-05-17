@@ -10,6 +10,8 @@ import {
 import Details from './components/details/Details';
 import Main from './components/main/Main';
 
+import TransactionState from './context/TransactionState';
+
 import useStyles from './styles';
 
 const App = () => {
@@ -26,32 +28,34 @@ const App = () => {
   }, [speechState]);
 
   return (
-    <div>
-      <Grid
-        className={classes.grid}
-        container
-        spacing={0}
-        alignItems='center'
-        justify='center'
-        style={{ height: '100vh' }}
-      >
-        <Grid item xs={12} sm={4} className={classes.mobile}>
-          <Details title='Income' />
+    <TransactionState>
+      <div>
+        <Grid
+          className={classes.grid}
+          container
+          spacing={0}
+          alignItems='center'
+          justify='center'
+          style={{ height: '100vh' }}
+        >
+          <Grid item xs={12} sm={4} className={classes.mobile}>
+            <Details title='Income' />
+          </Grid>
+          <Grid ref={main} item xs={12} sm={3} className={classes.main}>
+            <Main />
+          </Grid>
+          <Grid item xs={12} sm={4} className={classes.desktop}>
+            <Details title='Income' />
+          </Grid>
+          <Grid item xs={12} sm={4} className={classes.last}>
+            <Details title='Expense' />
+          </Grid>
+          <PushToTalkButtonContainer>
+            <PushToTalkButton />
+          </PushToTalkButtonContainer>
         </Grid>
-        <Grid ref={main} item xs={12} sm={3} className={classes.main}>
-          <Main />
-        </Grid>
-        <Grid item xs={12} sm={4} className={classes.desktop}>
-          <Details title='Income' />
-        </Grid>
-        <Grid item xs={12} sm={4} className={classes.last}>
-          <Details title='Expense' />
-        </Grid>
-        <PushToTalkButtonContainer>
-          <PushToTalkButton />
-        </PushToTalkButtonContainer>
-      </Grid>
-    </div>
+      </div>
+    </TransactionState>
   );
 };
 

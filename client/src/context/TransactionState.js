@@ -35,7 +35,7 @@ const TransactionState = (props) => {
     },
   ];
 
-  const [dispatch] = useReducer(transactionReducer, initialState);
+  const [transactions, dispatch] = useReducer(transactionReducer, initialState);
 
   // actions creators
   const deleteTransaction = (id) => {

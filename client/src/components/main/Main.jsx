@@ -10,7 +10,7 @@ import {
 import Form from './form/Form';
 import List from './list/List';
 import InfoCard from '../InfoCard/InfoCard';
-import TransactionContext from '../../../context/transactionContext';
+import TransactionContext from '../../context/transactionContext';
 
 import useStyles from './styles';
 
