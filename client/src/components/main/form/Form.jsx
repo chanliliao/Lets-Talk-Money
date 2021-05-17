@@ -29,9 +29,14 @@ const initialState = {
 
 const Form = () => {
   const classes = useStyles();
-  const [formData, setFormData] = useState(initialState);
-  const { addTransaction } = useContext(ExpenseTrackerContext);
+
+  // context
+  const transactionContext = useContext(TransactionContext);
+  const { addTransaction } = transactionContext;
   const { segment } = useSpeechContext();
+
+  // states
+  const [formData, setFormData] = useState(initialState);
   const [open, setOpen] = useState(false);
 
   const createTransaction = () => {
