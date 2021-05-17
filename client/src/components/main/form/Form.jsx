@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 import { v4 as uuidv4 } from 'uuid';
 import { useSpeechContext } from '@speechly/react-client';
-import { ExpenseTrackerContext } from '../../../context/context';
+import TransactionContext from '../../../context/transactionContext';
 import useStyles from './style';
 import {
   incomeCategories,
