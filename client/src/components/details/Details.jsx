@@ -1,12 +1,20 @@
 import React from 'react';
+
+// material import
 import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
+
+// chart import
 import { Doughnut } from 'react-chartjs-2';
 
+// custom hooks
 import useStyles from './styles';
 import useTransactions from '../../useTransactions';
 
 const Details = ({ title, subheader }) => {
+  // hooks
   const classes = useStyles();
+
+  // context
   const { total, chartData } = useTransactions(title);
 
   return (
